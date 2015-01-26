@@ -1,0 +1,31 @@
+{
+  "name": "stubby-on-bluemix",
+  "version": "0.1.0",
+  "description": "A simple RESTful stubbing solution for IBM Bluemix based on stubby",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://hub.jazz.net/git/springdo/stubby-on-bluemix"
+  },
+  "keywords": [
+    "Stubs",
+    "cloud",
+    "bluemix",
+    "ibm"
+  ],
+  "author": "Your Name <you.name@example.org>",
+    "contributors": [{
+    "name": "Donal Spring",
+    "email": "donal@uk.ibm.com"
+  },{
+    "name": "Jonathan Blood",
+    "email": "jonathan.blood@uk.ibm.com"
+  }],
+  "dependencies": {
+    "stubby": "*"
+  }
+}

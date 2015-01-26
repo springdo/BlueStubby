@@ -1,0 +1,90 @@
+[
+    {
+        "request": {
+            "url": "^/hello/world",
+            "method": "GET"
+        },
+        "response": {
+            "status": 200,
+            "headers": {
+                "Content-Type": "application/json",
+                "server":"stubby-on-bluemix/0.1"
+            },
+            "latency": 1200,
+            "body": {
+                "message" :"Hello World"
+            }
+        }
+    },{
+        "request": {
+            "url": "^/hello/with/queryparams$",
+            "method": "GET",
+            "query" :{
+                "apiKey" : "[a-zA-Z0-9]+"
+            }
+        },
+        "response": {
+            "status": 200,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "latency": 1200,
+            "body": {
+                "message" :"Hello World",
+                "Key" : "The API Key supplied was <% query.apiKey %>"
+            }
+        }
+    },{
+        "request": {
+            "url": "^/hello/with/post/data$",
+            "method": "POST",
+            "post" : "<!xml blah='blah blah blah'><envelope><letter>Hope I catch the mid day POST</letter></envelope>",
+            "headers": {
+                "Content-Type": "application/xml"
+            },
+            "query" :{
+                "apiKey" : "[a-zA-Z0-9]+"
+            }
+        },
+        "response": {
+            "status": 200,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "latency": 1200,
+            "body": {
+                "message" :"You caught the mid-day POST",
+                "Key" : "The API Key supplied was <% query.apiKey %>"
+            }
+        }
+    },{
+        "request": {
+            "url": "^/hello/with/simple/post$",
+            "method": "POST",
+            "post" : "Here is some data"
+        },
+        "response": {
+            "status": 200,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "latency": 1200,
+            "body": {
+                "message" :"Thanks for the post data"
+            }
+        }
+    },{
+        "request": {
+            "url": "/",
+            "method": "GET"
+        },
+        "response": {
+            "status": 200,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "latency": 1200,
+            "file": "stubs.json"
+        }
+    }
+]
