@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://hub.jazz.net/git/springdo/stubby-on-bluemix"
+    "url": "https://github.com/springdo/BlueStubby.git"
   },
   "keywords": [
     "Stubs",
